@@ -1,0 +1,79 @@
+<%- include("../partials/header.ejs") %>
+<body id="cameras-body">
+
+    <div class=" fixed-top text-center text-light" id="camera-div">
+        <h2 class="text-light">Sensores <img src="/img/icons/iconcamera.ico" class="text-light camera-title" width="45px" alt=""></h2>
+    </div>
+
+    <div class="container text-center" id="btns-ac">
+      <div class="btn-group mr-2" role="group" aria-label="Second group">
+        <button type="button" class="btn text-light add-sensores"><i class="bi bi-plus-lg"></i> Sensores</button>
+      </div>
+      <div class="btn-group" role="group" aria-label="Third group">
+        <button type="button" class="btn text-light config-sensores"><i class="bi bi-gear"></i> Sensores</button>
+      </div>
+    </div>
+
+    <div class="container text-center" id="camera-elementos">
+      <div class="col-5 col-sm-3 btn float-left ml-3" id="div-fechado">
+        <h5 class="text-light">Fechado</h5>
+      </div>
+    </div>
+
+
+    <div class="container text-center" id="camera-elementos">
+      <div class="col-5 col-sm-3  btn float-right mr-3" id="div-aberto">
+        <h5 class="text-light">Aberto</h5>
+      </div>   
+  </div>
+
+    <div class="container position-relative text-center mt-1">
+        <div class="col-5 col-sm-3 btn float-left ml-3">
+          <div class="list-group">
+            <div class="list-group-item list-group-item-action">Quarto <br><i class="bi bi-stop-fill" style="font-size: 25px;" id="sala"></i></div><br>
+            <div class="list-group-item list-group-item-action">Quarto <br><i class="bi bi-stop-fill" style="font-size: 25px;" id="sala"></i></div><br>
+            <div class="list-group-item list-group-item-action">Quarto <br><i class="bi bi-stop-fill" style="font-size: 25px;" id="sala"></i></div><br>
+            <div class="list-group-item list-group-item-action">Quarto <br><i class="bi bi-stop-fill" style="font-size: 25px;" id="sala"></i></div><br>
+          </div>
+        </div>
+    </div>
+
+    <div class="container position-relative text-center mt-1" id="div-aberto-edit">
+        <div class="col-5 col-sm-3 btn float-right mr-3">
+          <div class="list-group">
+            <div class="list-group-item list-group-item-action">Quarto <br><i class="bi bi-stop-fill" style="font-size: 25px;" id="quarto"></i></div><br>
+            <div class="list-group-item list-group-item-action">Quarto <br><i class="bi bi-stop-fill" style="font-size: 25px;" id="quarto"></i></div><br>
+            <div class="list-group-item list-group-item-action">Quarto <br><i class="bi bi-stop-fill" style="font-size: 25px;" id="quarto"></i></div><br>
+            <div class="list-group-item list-group-item-action">Quarto <br><i class="bi bi-stop-fill" style="font-size: 25px;" id="quarto"></i></div><br>
+          </div>
+        </div>   
+    </div>
+
+    <div class="fixed-bottom camera-nav ">
+        <ul class="nav d-flex justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link" href="/home" width="100px"><i class="bi bi-house-door-fill text-light pr-5" style="font-size: 15px;"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="bi bi-grid-fill text-light pr-3" style="font-size: 15px;"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/perfil"><i class="bi bi-person-fill text-light pl-3" style="font-size: 15px;"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#"><i class="bi bi-text-left text-light pl-5" style="font-size: 15px;"></i></a>
+          </li>
+        </ul>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+<script>
+    // $(function(){
+    //     var nome = localStorage.getItem('nome')
+    //     var email = localStorage.getItem('email')
+    //     if(nome == undefined || email == undefined){
+    //         window.location.href = "/login"
+    //     }
+    // })
+</script>
+<%- include("../partials/footer.ejs") %>

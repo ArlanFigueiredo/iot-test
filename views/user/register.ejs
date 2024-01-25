@@ -1,0 +1,108 @@
+<%- include("../partials/header.ejs") %>
+
+
+<body class="body-login">
+<div id="div-register" >
+    <div class="container w-75">
+        <a href="/login" class="btn btn-voltar mt-5"><i class="bi bi-arrow-left text-light"></i></a>
+    </div>
+        <form action="" class="form-login">
+            <div class="form-group w-75 container container-inputs">
+                <div class="row mt-5">
+                    <div class="col-md-12">
+                        <input class="form-control border-0" type="text" name="nome" id="nome" placeholder="Nome completo">
+                    </div>
+                </div>
+                <hr class="hr-login bg-dark">
+                <div class="row mt-5">
+                    <div class="col-md-12">
+                        <input class="form-control border-0" type="text" name="email" id="email" placeholder="Email">
+                    </div>
+                </div>
+                <hr class="hr-login bg-dark">
+                <div class="row mt-5">
+                    <div class="col-md-12">
+                        <input class="form-control border-0" type="password" name="senha" id="senha" placeholder="Senha">
+                    </div>
+                </div>
+                <hr class="hr-login bg-dark">
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="Check" required>
+                    <label class="form-check-label" for="Check">
+                        Li e concordo com os <strong>TERMOS DE USO</strong>
+                    </label>
+                  </div>
+            </div>
+            <div class="container ct-btn-login">
+                <div class="container w-75 mt-5">
+                    <button class="btn btn-block btn-register-register btn-lg text-light" type="button" onclick="create()"><h6 class="mt-2">Registrar</h6></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal fade modal-error-cadastro" id="modal-error" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+        </div>
+      </div>
+    </div>
+</div>
+</body>
+<script>
+function create(){
+    var nome = $('#nome').val()
+    var email = $('#email').val()
+    var senha = $('#senha').val()
+    let checkbox = $('#Check').is(':checked')
+
+    if(nome == undefined || nome == '' || nome == ' '){
+        $('.modal-body').html("Por favor, informe o Nome.")
+        $('#modal-error').modal('show')
+        setTimeout(function(){
+            $('#modal-error').modal('hide')
+        },2500)
+    }else if(email == undefined || email == '' || email == ' '){
+        $('.modal-body').html("Por favor, informe o E-mail.")
+        $('#modal-error').modal('show')
+        setTimeout(function(){
+            $('#modal-error').modal('hide')
+        },2500)
+    }else if(senha == undefined || senha == '' || senha == ' '){
+        $('.modal-body').html("Por favor, informe a Senha.")
+        $('#modal-error').modal('show')
+        setTimeout(function(){
+            $('#modal-error').modal('hide')
+        },2500)
+    }else if(checkbox == false){
+        $('.modal-body').html("Por favor, aceite os termos de uso e politicas de privacidade para continuar ")
+        $('#modal-error').modal('show')
+        setTimeout(function(){
+            $('#modal-error').modal('hide')
+        },2500)
+    }else{
+        axios.post('http://localhost:8080/user',{nome:nome, email:email, senha:senha}).then(user => {
+            var msg = user.data.success
+            $('.modal-body').html(msg)
+            $('#modal-error').modal('show')
+            setTimeout(function(){
+                $('#modal-error').modal('hide')
+                $('.form-login')[0].reset()
+                window.location.href = "/login"
+            },2500)
+            console.log(msg)
+        }).catch(err => {
+            msg = err.response.data.error
+            $('.modal-body').html(msg)
+            $('#modal-error').modal('show')
+            setTimeout(function(){
+                $('#modal-error').modal('hide')
+            },2500)
+            console.log(err)
+        })
+    }
+}
+</script>
+<%- include("../partials/footer.ejs") %>

@@ -1,0 +1,67 @@
+<%- include("../partials/header.ejs") %>
+<body id="cameras-body">
+
+    <div class=" fixed-top text-center text-light" id="camera-div">
+        <h2 class="text-light">Planos <img src="" class="text-light camera-title" width="45px" alt=""></h2>
+    </div>
+    
+
+    <div class="container" id="container-assinatura">
+        <h2><strong>Assinaturas:</strong></h2>
+
+        <div class="card-header">
+            <h5>Plano Standart:</h5> <br>
+            <p>Plano que ja vem por padrao e contem anuncios 
+                além de diversas limitações. Preço: Gratis
+            </p>
+            <button class="btn btn-primary text-light">Selecionar</button>
+        </div>
+
+        <div class="card-header mt-3">
+            <h5>Plano Safe Home:</h5> <br>
+            <p>Plano voltado para casas, sem anuncios, 
+                as limitações agora ja são mais 
+                abrangentes. Preço: R$200
+            </p>
+            <button class="btn btn-primary text-light">Selecionar</button>
+        </div>
+
+        <div class="card-header mt-3">
+            <h5>Plano Condominium:</h5> <br>
+            <p>Plano voltado para condominios, as limitações 
+                são inesistentes,monitoramento 24hrs, 
+                assistencia tecnica. Preço:R$500
+            </p>
+            <button class="btn btn-primary text-light">Selecionar</button>
+        </div>
+    </div>
+    
+    
+    <div class="fixed-bottom camera-nav ">
+        <ul class="nav d-flex justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link" href="/home" width="100px"><i class="bi bi-house-door-fill text-light pr-5" style="font-size: 15px;"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="bi bi-grid-fill text-light pr-3" style="font-size: 15px;"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/perfil"><i class="bi bi-person-fill text-light pl-3" style="font-size: 15px;"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#"><i class="bi bi-text-left text-light pl-5" style="font-size: 15px;"></i></a>
+            </li>
+        </ul>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+<script>
+    // $(function(){
+    //     var nome = localStorage.getItem('nome')
+    //     var email = localStorage.getItem('email')
+    //     if(nome == undefined || email == undefined){
+    //         window.location.href = "/login"
+    //     }
+    // })
+</script>
+<%- include("../partials/footer.ejs") %>

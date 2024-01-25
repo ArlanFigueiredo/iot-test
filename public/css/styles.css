@@ -1,0 +1,400 @@
+.btn-cadastro:hover{
+    background-color: rgb(183, 122, 240);
+    list-style: none;
+    text-decoration: none;
+    border: none;
+}
+
+#home-iot{
+    margin-top: 85px;
+}
+
+
+
+.h1-login{
+    font-size: 70px;
+}
+
+
+
+.body-edit{
+    background-color: rgba(19, 29, 51, 0.983);
+}
+
+
+.img-camera{
+    height: 440px;
+    
+}
+
+
+.btn-entrar{
+    margin-top: 95px;
+    border-radius: 35px;
+    height: 50px;
+}
+
+
+
+.container-login{
+    margin-top: 50px;
+    margin-left: 60px;
+    margin-bottom: 10px;
+}
+
+
+.btn-logar{
+    border-radius: 35px;
+    height: 40px;
+    background: rgba(19, 29, 51, 0.983);
+}
+#container-login{
+    margin-top: 200px;
+}
+
+
+.btn-register{
+    border-radius: 35px;
+    height: 40px;
+    background: rgba(199, 198, 198, 0.459);
+}
+
+.form-login > input{
+    border: none;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+} 
+
+
+textarea:hover, input:hover, select:hover {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    border: none;
+    outline: 0;
+}
+button:focus{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    border: none;
+    outline: 0;
+}
+
+.btn-register-register{
+    border-radius: 35px;
+    height: 50px;
+    background: rgba(19, 29, 51, 0.983);
+}
+
+
+
+.btn-voltar{
+    background: rgba(19, 29, 51, 0.983);
+}
+
+#div-register{
+    margin-top: 50px;
+}
+
+
+#modal-error-login{
+    width: 450px;
+}
+
+.modal-error-cadastro{
+    margin-top: 300px;
+}
+
+
+
+
+
+
+
+
+
+#home-body{
+    background: rgba(19, 29, 51, 0.983);
+}
+
+#home-camera{
+    height: 120px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+#home-sensores{
+    height: 120px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+#home-config{
+    height: 120px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+#home-shop{
+    height: 120px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+#home-div{
+    margin-top: 40px;
+}
+
+#home-elementos{
+    margin-top: 130px;
+}
+
+
+#camera-div{
+    width: 100%;
+    padding-top: 10px;
+    background: rgba(19, 29, 51, 0.983);
+    height: 70px;
+    margin-bottom: 70px;
+}
+
+.camera-title{
+    text-decoration: #fff;
+}
+
+
+.camera-nav{
+    padding-top: 5px;
+    padding-bottom: 15px;
+    background: rgba(19, 29, 51, 0.983);
+
+}
+
+#camera-elementos{
+    margin-top: 50px;
+}
+#camera-elementos1{
+    margin-top: 50px;
+   margin-bottom: 100px;
+}
+
+
+
+#camera-camera{
+    height: 100px;
+    border-radius: 5px;
+    margin: 5px;
+    background-image: url('/img/imgcameras/estacio1.png');
+    background-size: 200px;
+    background-repeat: no-repeat;
+}
+
+#camera-sensores{
+    height: 100px;
+    border-radius: 5px;
+    margin: 5px;
+    background-image: url('/img/imgcameras/estacio2.png');
+    background-size: 200px;
+    background-repeat: no-repeat;
+}
+
+#camera-config{
+    height: 100px;
+    border-radius: 5px;
+    margin: 5px;
+    background-image: url('/img/imgcameras/estacio3.png');
+    background-size: 200px;
+    background-repeat: no-repeat;
+}
+
+#camera-shop{
+    height: 100px;
+    border-radius: 5px;
+    margin: 5px;
+    background-image: url('/img/imgcameras/estacio4.png');
+    background-size: 200px;
+    background-repeat: no-repeat;
+}
+
+
+#btns-ac{
+    margin-top: 100px;
+}
+
+
+
+.add-camera{
+    border-radius: 10px;
+    background: rgba(37, 55, 93, 0.983);
+}
+
+.config-camera{
+    border-radius: 10px;
+    background: rgba(37, 55, 93, 0.983);
+}
+
+
+
+#quarto{
+    color: green;
+}
+
+#sala{
+    color: rgb(255, 0, 0);
+}
+
+
+#div-aberto{
+    background-color: green;
+}
+
+#div-fechado{
+    background-color: red;
+}
+
+
+.add-sensores{
+    border-radius: 10px;
+    background: rgba(37, 55, 93, 0.983);
+
+}
+
+.config-sensores{
+    border-radius: 10px;
+    background: rgba(37, 55, 93, 0.983);
+}
+
+.add-sensores:hover{
+    border-radius: 10px;
+    background: rgba(16, 41, 94, 0.983);
+}
+
+.config-sensores:hover{
+    border-radius: 10px;
+    background: rgba(16, 41, 94, 0.983);
+}
+
+
+#div-aberto-edit{
+    height: 1000px;
+    max-height: 3000px;
+}
+
+
+#container-assinatura{
+    margin-top: 100px;
+    height: 850px;
+}
+
+
+
+/* 
+
+
+.container-principal{
+    height: 600px;
+}
+
+.ct-btn-login{
+    margin-top: 150px;
+}
+
+.container-inputs{
+    margin-top: 100px;
+}
+.container-ola{
+    margin-top: 100px;
+}
+
+
+
+
+#modal-error{
+    margin-top: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+#cameras-body{
+    background-color: #fff;
+}
+
+#cameras-div{
+    background: rgba(19, 29, 51, 0.983);
+    height: 135px;
+    border-radius: 20px;
+}
+
+#camera-ul-nav{
+    background: rgba(19, 29, 51, 0.983);
+}
+
+.a-icons{
+   color: rgba(255, 255, 255, 0.983);
+}
+
+#camera-btns{
+    margin-top: 200px;
+}
+
+#camera-add{
+    border-radius: 5px;
+    background: rgba(19, 29, 51, 0.983);
+}
+
+#camera-config{
+    border-radius: 5px;
+    background: rgba(19, 29, 51, 0.983);
+}
+
+
+.camera-1{
+    background-image: url('/img/imgcameras/estacio1.png');
+    background-size: 250px; 
+}
+
+.camera-2{
+    background-image: url('/img/imgcameras/estacio2.png');
+    background-size: 250px; 
+}
+
+.camera-3{
+    background-image: url('/img/imgcameras/estacio3.png');
+    background-size: 250px; 
+}
+
+.camera-4{
+    background-image: url('/img/imgcameras/estacio4.png');
+    background-size: 250px; 
+}
+
+
+.cameras-info{
+    margin-top: 90px;
+}
+
+#camera-body{
+    width: 100%;
+}
+
+
+.camera-modal{
+    margin-left: 10px;
+} */

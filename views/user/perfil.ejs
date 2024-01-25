@@ -1,0 +1,51 @@
+<%- include("../partials/header.ejs") %>
+<body id="home-body">
+
+    <div class="container text-center text-light mt-5" id="perfil-container">
+        <h5 class="text-light" ><i class="bi bi-person-circle text-light mb-2" style="font-size: 25px;" id="recebeNome"> </i></h5>
+        <hr class="text-light bg-light mt-4 w-75" >
+    </div>
+
+    <div class="container text-center mt-5">
+        <button class="btn btn-danger" type="button" onclick="logout()">Sair</button>
+    </div>
+
+    <div class="fixed-bottom mb-3">
+        <hr class="text-light bg-light">
+        <ul class="nav d-flex justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link" href="/home" width="100px"><i class="bi bi-house-door-fill text-light pr-5" style="font-size: 20px;"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="bi bi-grid-fill text-light pr-3" style="font-size: 20px;"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="bi bi-person-fill text-light pl-3" style="font-size: 20px;"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#"><i class="bi bi-text-left text-light pl-5" style="font-size: 20px;"></i></a>
+            </li>
+        </ul>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+<script>
+    $(function(){
+        var nome = localStorage.getItem('nome')
+        var email = localStorage.getItem('email')
+        $('#recebeNome').html('  '+ nome)
+        if(nome == undefined || email == undefined){
+            window.location.href = "/login"
+        }
+    })
+
+    function logout(){ // Função que deleta todos os dados(Nome e CodUser) do localStorage, lembrando que sem esses dados não é possivel ultilizar o chat até quue faça login com email e senha corretos.
+        localStorage.clear();
+        setTimeout(function(){
+            location.reload()
+        },500)
+        console.log("BOTAO TESTADO")
+    }
+
+</script>
+<%- include("../partials/footer.ejs") %>

@@ -1,0 +1,92 @@
+<%- include("../partials/header.ejs") %>
+<body class="body-login">
+
+    <div class="container" id="container-login">
+        <form action="" class="form-login">
+            <div class="form-group w-75 container container-inputs">
+                <div class="row mt-5">
+                    <div class="col-md-12">
+                        <input class="form-control border-0" type="text" name="email" id="email" placeholder="Email">
+                    </div>
+                </div>
+                <hr class="hr-login bg-dark">
+                <div class="row mt-5">
+                    <div class="col-md-12">
+                        <input class="form-control border-0" type="password" name="senha" id="senha" placeholder="Senha">
+                    </div>
+                </div>
+                <hr class="hr-login bg-dark">
+            </div>
+        </form>
+        <div class="container ct-btn-login">
+            <div class="container w-75 mt-5 ">
+                <a class="btn btn-block text-light btn-logar btn-lg" onclick="login()" type="button"><h6>Login</h6></a>
+            </div>
+            <div class="container w-75 mt-5">
+                <a class="btn btn-block btn-register btn-lg" href="/register"><h6>Registrar</h6></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade modal-error-login" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              ...
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+<script>
+
+// $(function(){
+//     var nome = localStorage.getItem('nome')
+//     var email = localStorage.getItem('email')
+
+//     if(nome != undefined || email != undefined){
+//         window.location.href = "/home"
+//     }
+// })
+
+function login(){
+    var email = $('#email').val()
+    var senha = $('#senha').val()
+    if(email == undefined || email == '' || email == ' '){
+        $('.modal-body').html("Por favor, informe o E-mail.")
+        $('.modal-error-login').modal('show')
+        setTimeout(function(){
+            $('.modal-error-login').modal('hide')
+        },2500)
+    }else if(senha == undefined || senha == '' || senha == ' '){
+        $('.modal-body').html("Por favor, informe a Senha.")
+        $('.modal-error-login').modal('show')
+        setTimeout(function(){
+            $('.modal-error-login').modal('hide')
+        },2500)
+    }else{
+        axios.post('http://localhost:8080/logar', {email:email, senha:senha}).then(data => {
+                var nome = data.data.user.nome
+                var email = data.data.user.email
+                localStorage.setItem('nome', nome)
+                localStorage.setItem('email',email)
+                setTimeout(function(){
+                    window.location.href = "/home"
+                })
+                console.log(nome)
+            }).catch(err => {
+                console.log(err)
+                var error = err.response.data.error
+                $('.modal-body').html(error)
+                $('.modal-error-login').modal('show')
+                setTimeout(function(){
+                    $('.modal-error-login').modal('hide')
+                },2500)
+            })
+    }
+}
+
+</script>
+<%- include("../partials/footer.ejs") %>

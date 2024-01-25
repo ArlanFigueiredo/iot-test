@@ -1,0 +1,39 @@
+<%- include("./partials/header.ejs") %>
+<body class="body-edit">    
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/img/camera.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/img/cameraanucio.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/img/cameraseguranca.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Proximo</span>
+        </a>
+      </div>
+
+    <div class="container mt-4" >
+        <div class="card-body text-center text-light" id="home-iot">
+            <h2><strong>IoT - Home Security</strong></h2>
+        </div>
+        <div class="row text-center">
+            <div class="w-75  text-light text-center container">
+                <h6>Segurança e integração na palma da sua mão</h6>
+            </div>
+        </div>
+    </div>
+    <div class="container w-75 mt-5">
+        <a class="btn btn-block bg-light btn-entrar btn-lg" type="submit" href="/login"><h4>Entrar</h4></a>
+    </div>
+</body>
+<%- include("./partials/footer.ejs") %>
